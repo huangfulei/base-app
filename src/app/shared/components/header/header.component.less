@@ -1,0 +1,131 @@
+@import "../../../../assets/less/colors.less";
+@import "../../../../assets/less/sizes.less";
+
+.navbar{
+  padding: 0;
+  min-height: @header-small;
+  border: none;
+  background: @gm-blue;
+  color: @white;
+  border-radius: 0px;
+  margin-bottom: 0px;
+
+  @media(min-width: 768px){
+    background: @white;
+    color: @gm-black;
+  }
+}
+
+.sidebar-toggle{
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px 7px 16px;
+  margin: 0;
+  border-radius: 0px;
+  float: left;
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+  outline: none;
+
+  @media(min-width: 768px){
+    padding: 24px 30px 23px 30px;
+    &:hover {
+      .fa-bars{
+        color: @gm-dark-blue;
+      }
+    }
+    &:active {
+      .fa-bars{
+        color: @gm-light-blue;
+      }
+    }
+  }
+
+  .fa-bars{
+    font-size: 1em;
+    color: @white;
+    margin-top: 10px;
+
+    @media(min-width: 768px){
+      font-size: 1.667em;
+      color: @gm-blue;
+      margin-top: 0px;
+    }
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    top: 0;
+    padding-top: 17px !important;
+
+    @media(max-width: 768px) {
+      padding-top: 4px !important;
+    }
+  }
+}
+
+.title{
+  outline: none;
+  cursor: pointer;
+}
+
+.navbar-brand{
+  padding: 10px 0;
+  height: @header-small;
+
+  @media(max-width: 767px){
+    width: 100%;
+    text-align: center;
+    margin-left: 3rem;
+    font-size: 1.125rem;
+  }
+
+  @media(min-width: 768px){
+    font-size: 24px;
+    height: calc(@header-large ~" - 5px");
+    padding: 16px 0 19px 0;
+    margin-left: 30px;
+  }
+
+  @media(min-width: 992px){
+    margin-left: 10px;
+  }
+}
+
+.navbar-text {
+  @media(min-width: 786px) {
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.navbar-date{
+  font-size: 16px;
+  margin-top: 23px;
+}
+.navbar-image{
+  margin-left: 20px;
+  margin-top: 0px;
+
+  img{
+    height: 40px;
+  }
+}
+
+.has-sidebar {
+  border-bottom: 5px solid @gm-blue;
+
+  .navbar-image {
+    margin-left: 90px;
+  }
+
+  .navbar-brand {
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      margin-left: 90px;
+    }
+  }
+}

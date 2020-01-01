@@ -1,0 +1,7 @@
+<div class="sidebar" [ngClass]="{'sidebar-open': isOpen }" (click)="closeSidebar()">
+  <a class="sidebar-item d-block" *ngFor="let item of navItems"
+     [ngClass]="{'active-sidebar-item': item == activeItem}"
+     (click)="selectRoute(item)">{{item}}
+    <span class="pull-right pr-3"><i class="fa fa-angle-right"></i></span>
+  </a>
+</div>

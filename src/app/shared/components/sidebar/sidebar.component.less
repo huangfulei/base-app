@@ -1,0 +1,116 @@
+@import "../../../../assets/less/colors.less";
+@import "../../../../assets/less/sizes.less";
+
+.sidebar {
+  height: 100%;
+  width: @sidebar-width;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: @sidebar-width *-1;
+  background-color: @gm-light-gray;
+  text-overflow: clip;
+  transition: 0.5s;
+
+  .sidebar-body {
+    overflow-y: auto;
+    height: 100%;
+
+    @media (min-height: 451px) {
+      height: calc(~
+
+"100% - " calc(@tall-padding + @footer-height));
+    }
+
+  }
+
+  .sidebar-item {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: @gm-black;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @gm-lightest-gray;
+
+      &::before {
+        background-color: @gm-blue;
+        width: 5px;
+        height: 43px;
+        position: absolute;
+        content: "";
+        margin-left: -32px;
+        margin-top: -8px;
+      }
+
+    }
+
+    &:active {
+      background-color: @gm-blue;
+      color: @white;
+    }
+
+  }
+
+  .active-sidebar-item {
+    background-color: @gm-gray;
+
+    &::before {
+      background-color: @gm-blue;
+      width: 5px;
+      height: 40px;
+      position: absolute;
+      content: "";
+      margin-left: -32px;
+      margin-top: -8px;
+    }
+
+  }
+
+  .sidebar-header {
+    // border-bottom: 2 px solid @gm-black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 85%;
+
+    span {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    span.current-user {
+      font-size: 1.222em;
+      font-weight: normal;
+    }
+
+  }
+
+  .sidebar-footer {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    span {
+      color: @gm-black;
+      font-size: 0.667em;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+
+    .separator-line {
+      border-top: 1px solid @gm-black;
+      margin: 0 auto;
+      padding-top: 2px;
+      width: 80%;
+    }
+
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar a {
+    font-size: 1.000em;
+  }
+}

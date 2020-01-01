@@ -1,0 +1,26 @@
+@import "../../../../assets/less/colors.less";
+@import "../../../../assets/less/sizes.less";
+
+footer {
+  width: 100%;
+  color: @white;
+  background-color: @gm-black;
+  text-align: center;
+  padding: 5px;
+  line-height: @footer-small;
+  font-size: 12px;
+
+  @media(min-width: 768px){
+    line-height: @footer-large;
+    padding: 0 40px;
+  }
+
+  img{
+    height: 20px;
+    margin-bottom: 1px;
+  }
+
+  .pipe{
+    margin: 0 8px;
+  }
+}

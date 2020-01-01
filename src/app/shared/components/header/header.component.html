@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-sm" [ngClass]="{'has-sidebar': useSidebar}" role="navigation">
+  <button type="button" class="sidebar-toggle d-block" [ngClass]="{'d-md-none': !useSidebar}" (click)="toggleSidebar()">
+    <span class="sr-only">Toggle sidebar</span>
+    <fa name="bars" size="4x"></fa>
+  </button>
+  <a class="navbar-image d-none d-lg-block" routerLink='/home'>
+    <img src="../../../../assets/images/slider1.jpg">
+  </a>
+  <span class="navbar-brand"><span class="title" routerLink='/home'>Restaurant</span></span>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="navbar-nav ml-auto pr-3">
+<!--      <li class="nav-item">-->
+<!--&lt;!&ndash;        <span class="navbar-text navbar-date d-none d-md-inline-block">{{currentDate| date:'MM/dd/yyyy'}}</span>&ndash;&gt;-->
+<!--      </li>-->
+    </ul>
+  </div>
+</nav>

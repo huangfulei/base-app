@@ -1,0 +1,39 @@
+<form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <h1>Log in</h1>
+
+<!--    <div *ngIf="user.statusCode==4" class="alert alert-danger">
+      {{user.statusMsg}}
+    </div>
+    <div *ngIf="user.statusCode==5" class="alert alert-danger">
+      {{user.statusMsg}}
+    </div>-->
+
+    <mat-form-field>
+      <input matInput type="text"
+             class="form-control"
+             placeholder="email"
+             formControlName="email"
+             required/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="password"
+             class="form-control"
+             placeholder="password"
+             formControlName="password"
+             required/>
+    </mat-form-field>
+
+    <div>
+      <button type="submit" [disabled]="!loginForm.valid" class=" btn btn-primary">
+        Log in
+      </button>
+      <button type="button"  class=" btn btn-primary" (click)="redirect()">
+        redirect to
+      </button>
+      <a routerLink="/user/sign_up" class="btn btn-link">Sign up</a>
+    </div>
+  </div>
+</form>
+
